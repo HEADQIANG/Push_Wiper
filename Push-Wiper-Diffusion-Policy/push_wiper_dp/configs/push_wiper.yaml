@@ -1,0 +1,113 @@
+defaults:
+  - runtime: rtx4090
+  - _self_
+
+_target_: push_wiper_dp.workspace.PushWiperWorkspace
+shape_meta:
+  obs:
+    mask: {shape: [3, 240, 320], type: rgb}
+    capture_reference_pose: {shape: [7], type: low_dim}
+  action: {shape: [3]}
+
+task:
+  dataset:
+    _target_: push_wiper_dp.dataset.PushWiperDataset
+    root: ${project_root:}/../AIRBOT-Data-Collection/data/push_wiper_export_assisted_complete_20260922
+    split: train
+    image_size: [240, 320]
+
+policy:
+  _target_: diffusion_policy.policy.diffusion_unet_image_policy.DiffusionUnetImagePolicy
+  shape_meta: ${shape_meta}
+  noise_scheduler:
+    _target_: diffusers.schedulers.scheduling_ddim.DDIMScheduler
+    num_train_timesteps: 100
+    beta_start: 0.0001
+    beta_end: 0.02
+    beta_schedule: squaredcos_cap_v2
+    clip_sample: true
+    set_alpha_to_one: true
+    steps_offset: 0
+    prediction_type: sample
+  obs_encoder:
+    _target_: diffusion_policy.model.vision.multi_image_obs_encoder.MultiImageObsEncoder
+    shape_meta: ${shape_meta}
+    rgb_model:
+      _target_: diffusion_policy.model.vision.model_getter.get_resnet
+      name: resnet18
+      weights: null
+    resize_shape: null
+    crop_shape: null
+    random_crop: false
+    use_group_norm: true
+    share_rgb_model: false
+    imagenet_norm: false
+  horizon: 16
+  n_action_steps: 16
+  n_obs_steps: 1
+  num_inference_steps: 10
+  obs_as_global_cond: true
+  diffusion_step_embed_dim: 128
+  down_dims: [256, 512, 1024]
+  kernel_size: 5
+  n_groups: 8
+  cond_predict_scale: true
+  eta: 0.0
+
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: 0.0001
+  betas: [0.95, 0.999]
+  eps: 1.0e-8
+  weight_decay: 1.0e-6
+  foreach: false
+
+ema:
+  _target_: diffusion_policy.model.diffusion.ema_model.EMAModel
+  update_after_step: 0
+  inv_gamma: 1.0
+  power: 0.75
+  min_value: 0.0
+  max_value: 0.9999
+
+training:
+  seed: 42
+  device: ${runtime.device}
+  num_epochs: ${runtime.num_epochs}
+  use_ema: true
+  gradient_accumulate_every: 1
+  lr_scheduler: cosine
+  lr_warmup_steps: 500
+  resume: null
+  # Stop at an epoch boundary without changing the configured LR schedule.
+  stop_after_epochs: null
+  val_every: ${runtime.val_every}
+  sample_every: ${runtime.sample_every}
+  checkpoint_every: ${runtime.checkpoint_every}
+  val_seed: 1042
+  sample_seed: 2042
+  threads: 4
+
+dataloader:
+  batch_size: ${runtime.batch_size}
+  num_workers: ${runtime.num_workers}
+  pin_memory: ${runtime.pin_memory}
+  persistent_workers: false
+  drop_last: false
+
+val_dataloader:
+  batch_size: ${runtime.val_batch_size}
+  num_workers: ${runtime.num_workers}
+  pin_memory: ${runtime.pin_memory}
+  persistent_workers: false
+  drop_last: false
+
+run:
+  output_dir: ${project_root:}/outputs/${runtime.name}
+
+hydra:
+  run:
+    dir: ${run.output_dir}
+  job:
+    chdir: false
+  output_subdir: .hydra

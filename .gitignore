@@ -1,0 +1,17 @@
+.agents/
+.codex/
+.airdc-system-packages/
+.venv/
+.venv-*/
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+outputs/
+*.ckpt
+*.mcap
+.env
+.env.*

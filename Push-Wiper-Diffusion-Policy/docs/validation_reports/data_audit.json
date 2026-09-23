@@ -1,0 +1,79 @@
+{
+  "root": "AIRBOT-Data-Collection/data/push_wiper_export_assisted_complete_20260922",
+  "fingerprint": "bc84492e63bafd3fb29ef8039d8cde7985e3f3686fc3f182bea8b57a7700918b",
+  "samples": 47,
+  "splits": {
+    "train": {
+      "samples": 39,
+      "tasks": 13
+    },
+    "validation": {
+      "samples": 8,
+      "tasks": 3
+    }
+  },
+  "task_split_overlap": [],
+  "action_definition": {
+    "version": 2,
+    "components": [
+      "x",
+      "y",
+      "delta_yaw"
+    ],
+    "position_reference": "follower SDK end reference in follower base",
+    "yaw_reference": "references.observation.follow.orientation",
+    "yaw_axis": "follower base Z",
+    "yaw_convention": "ZYX yaw(R)=atan2(R[1,0], R[0,0]); unwrap(wrap(yaw(R)-yaw(R_cap)))",
+    "units": {
+      "position": "m",
+      "angle": "rad"
+    },
+    "quaternion_order": "xyzw"
+  },
+  "preprocessing": {
+    "source_mask_shape": [
+      480,
+      640
+    ],
+    "image_size": [
+      240,
+      320
+    ],
+    "mask_channels": 3,
+    "mask_values": {
+      "dirt": 0,
+      "clean": 1
+    },
+    "mask_resize": "nearest",
+    "mask_normalized_range": [
+      -1,
+      1
+    ],
+    "n_obs_steps": 1,
+    "action_shape": [
+      16,
+      3
+    ],
+    "normalizer_fit_split": "train"
+  },
+  "train_action_min": [
+    0.15813003480434418,
+    -0.2238023430109024,
+    -3.1105082035064697
+  ],
+  "train_action_max": [
+    0.43013936281204224,
+    0.2194458395242691,
+    5.88960075378418
+  ],
+  "train_pose_constant_dimensions": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "minimum_source_dirt_pixels": 355
+}

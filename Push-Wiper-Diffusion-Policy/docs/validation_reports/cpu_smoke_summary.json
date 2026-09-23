@@ -1,0 +1,11 @@
+{
+  "next_epoch": 2,
+  "global_step": 4,
+  "ema_updates": 4,
+  "lr": 8.000000000000001e-07,
+  "best_val_loss": 0.3223220705986023,
+  "device": "cpu",
+  "elapsed_seconds": 6.904291999002453,
+  "data_fingerprint": "bc84492e63bafd3fb29ef8039d8cde7985e3f3686fc3f182bea8b57a7700918b",
+  "completed": true
+}

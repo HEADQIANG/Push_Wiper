@@ -1,0 +1,311 @@
+{
+  "action_definition": {
+    "version": 2,
+    "components": [
+      "x",
+      "y",
+      "delta_yaw"
+    ],
+    "position_reference": "follower SDK end reference in follower base",
+    "yaw_reference": "references.observation.follow.orientation",
+    "yaw_axis": "follower base Z",
+    "yaw_convention": "ZYX yaw(R)=atan2(R[1,0], R[0,0]); unwrap(wrap(yaw(R)-yaw(R_cap)))",
+    "units": {
+      "position": "m",
+      "angle": "rad"
+    },
+    "quaternion_order": "xyzw"
+  },
+  "samples": [
+    {
+      "task_id": "task_20260922_164134_93f570fc7aac",
+      "segment_id": "segment_20260922_164136_bc06ca4f06b4",
+      "split": "train",
+      "sample": "train/task_20260922_164134_93f570fc7aac/segment_20260922_164136_bc06ca4f06b4/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_164134_93f570fc7aac",
+      "segment_id": "segment_20260922_164345_383d8bed0cc3",
+      "split": "train",
+      "sample": "train/task_20260922_164134_93f570fc7aac/segment_20260922_164345_383d8bed0cc3/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_164134_93f570fc7aac",
+      "segment_id": "segment_20260922_164538_1a0236cb6da0",
+      "split": "train",
+      "sample": "train/task_20260922_164134_93f570fc7aac/segment_20260922_164538_1a0236cb6da0/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_164134_93f570fc7aac",
+      "segment_id": "segment_20260922_165228_c5ef1c51984f",
+      "split": "train",
+      "sample": "train/task_20260922_164134_93f570fc7aac/segment_20260922_165228_c5ef1c51984f/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_170424_26284b702a19",
+      "segment_id": "segment_20260922_170622_3dff7959f4fd",
+      "split": "train",
+      "sample": "train/task_20260922_170424_26284b702a19/segment_20260922_170622_3dff7959f4fd/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_170424_26284b702a19",
+      "segment_id": "segment_20260922_170720_cfb450fae8b8",
+      "split": "train",
+      "sample": "train/task_20260922_170424_26284b702a19/segment_20260922_170720_cfb450fae8b8/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_170424_26284b702a19",
+      "segment_id": "segment_20260922_170842_89c5a94485bd",
+      "split": "train",
+      "sample": "train/task_20260922_170424_26284b702a19/segment_20260922_170842_89c5a94485bd/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_170424_26284b702a19",
+      "segment_id": "segment_20260922_170913_e05a1df3faeb",
+      "split": "train",
+      "sample": "train/task_20260922_170424_26284b702a19/segment_20260922_170913_e05a1df3faeb/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_170424_26284b702a19",
+      "segment_id": "segment_20260922_171026_7c057fb825e5",
+      "split": "train",
+      "sample": "train/task_20260922_170424_26284b702a19/segment_20260922_171026_7c057fb825e5/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_170424_26284b702a19",
+      "segment_id": "segment_20260922_171123_3881849744c2",
+      "split": "train",
+      "sample": "train/task_20260922_170424_26284b702a19/segment_20260922_171123_3881849744c2/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_171241_34df057e37e8",
+      "segment_id": "segment_20260922_171317_5ca1aaa6c1b4",
+      "split": "train",
+      "sample": "train/task_20260922_171241_34df057e37e8/segment_20260922_171317_5ca1aaa6c1b4/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_171241_34df057e37e8",
+      "segment_id": "segment_20260922_171414_dfdf3fe35d45",
+      "split": "train",
+      "sample": "train/task_20260922_171241_34df057e37e8/segment_20260922_171414_dfdf3fe35d45/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_171241_34df057e37e8",
+      "segment_id": "segment_20260922_171537_a1d80af781ba",
+      "split": "train",
+      "sample": "train/task_20260922_171241_34df057e37e8/segment_20260922_171537_a1d80af781ba/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_171636_b8fe5a8c4218",
+      "segment_id": "segment_20260922_171703_22b3d816ef10",
+      "split": "validation",
+      "sample": "validation/task_20260922_171636_b8fe5a8c4218/segment_20260922_171703_22b3d816ef10/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_171636_b8fe5a8c4218",
+      "segment_id": "segment_20260922_171731_9bac196532bb",
+      "split": "validation",
+      "sample": "validation/task_20260922_171636_b8fe5a8c4218/segment_20260922_171731_9bac196532bb/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_171833_6ba6b15a6d1e",
+      "segment_id": "segment_20260922_171834_1fd6c6d717bd",
+      "split": "train",
+      "sample": "train/task_20260922_171833_6ba6b15a6d1e/segment_20260922_171834_1fd6c6d717bd/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172002_7d1274082854",
+      "segment_id": "segment_20260922_172005_08e47a94f010",
+      "split": "train",
+      "sample": "train/task_20260922_172002_7d1274082854/segment_20260922_172005_08e47a94f010/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172002_7d1274082854",
+      "segment_id": "segment_20260922_172107_5d1e85b7e10d",
+      "split": "train",
+      "sample": "train/task_20260922_172002_7d1274082854/segment_20260922_172107_5d1e85b7e10d/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172002_7d1274082854",
+      "segment_id": "segment_20260922_172156_3f545dccae6b",
+      "split": "train",
+      "sample": "train/task_20260922_172002_7d1274082854/segment_20260922_172156_3f545dccae6b/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172002_7d1274082854",
+      "segment_id": "segment_20260922_172302_fa3f2adc728d",
+      "split": "train",
+      "sample": "train/task_20260922_172002_7d1274082854/segment_20260922_172302_fa3f2adc728d/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172002_7d1274082854",
+      "segment_id": "segment_20260922_172348_045d593dee2d",
+      "split": "train",
+      "sample": "train/task_20260922_172002_7d1274082854/segment_20260922_172348_045d593dee2d/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172523_493a78b07a60",
+      "segment_id": "segment_20260922_172524_c71bf2f05ee8",
+      "split": "validation",
+      "sample": "validation/task_20260922_172523_493a78b07a60/segment_20260922_172524_c71bf2f05ee8/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172523_493a78b07a60",
+      "segment_id": "segment_20260922_172640_2b29e6de1ff1",
+      "split": "validation",
+      "sample": "validation/task_20260922_172523_493a78b07a60/segment_20260922_172640_2b29e6de1ff1/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172523_493a78b07a60",
+      "segment_id": "segment_20260922_172735_604168befad7",
+      "split": "validation",
+      "sample": "validation/task_20260922_172523_493a78b07a60/segment_20260922_172735_604168befad7/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_172523_493a78b07a60",
+      "segment_id": "segment_20260922_172820_39ba2edffcbb",
+      "split": "validation",
+      "sample": "validation/task_20260922_172523_493a78b07a60/segment_20260922_172820_39ba2edffcbb/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_173251_15c32c78a7b5",
+      "segment_id": "segment_20260922_173253_ce7712c64b52",
+      "split": "train",
+      "sample": "train/task_20260922_173251_15c32c78a7b5/segment_20260922_173253_ce7712c64b52/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_173251_15c32c78a7b5",
+      "segment_id": "segment_20260922_173355_c661b0a4381b",
+      "split": "train",
+      "sample": "train/task_20260922_173251_15c32c78a7b5/segment_20260922_173355_c661b0a4381b/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_173251_15c32c78a7b5",
+      "segment_id": "segment_20260922_173442_38d401152f7d",
+      "split": "train",
+      "sample": "train/task_20260922_173251_15c32c78a7b5/segment_20260922_173442_38d401152f7d/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_173643_59c49509b32c",
+      "segment_id": "segment_20260922_173644_446118ccb307",
+      "split": "train",
+      "sample": "train/task_20260922_173643_59c49509b32c/segment_20260922_173644_446118ccb307/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_173643_59c49509b32c",
+      "segment_id": "segment_20260922_173731_72c79373c43a",
+      "split": "train",
+      "sample": "train/task_20260922_173643_59c49509b32c/segment_20260922_173731_72c79373c43a/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_173851_ce62ed3622f5",
+      "segment_id": "segment_20260922_173852_16fa5d87ee2d",
+      "split": "train",
+      "sample": "train/task_20260922_173851_ce62ed3622f5/segment_20260922_173852_16fa5d87ee2d/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_174838_802a3c29d898",
+      "segment_id": "segment_20260922_174839_8bf37792a17d",
+      "split": "train",
+      "sample": "train/task_20260922_174838_802a3c29d898/segment_20260922_174839_8bf37792a17d/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_174838_802a3c29d898",
+      "segment_id": "segment_20260922_174907_3372131d5db7",
+      "split": "train",
+      "sample": "train/task_20260922_174838_802a3c29d898/segment_20260922_174907_3372131d5db7/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_174838_802a3c29d898",
+      "segment_id": "segment_20260922_175050_2a8e1efc52fc",
+      "split": "train",
+      "sample": "train/task_20260922_174838_802a3c29d898/segment_20260922_175050_2a8e1efc52fc/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_174838_802a3c29d898",
+      "segment_id": "segment_20260922_175140_7832c3165787",
+      "split": "train",
+      "sample": "train/task_20260922_174838_802a3c29d898/segment_20260922_175140_7832c3165787/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_174838_802a3c29d898",
+      "segment_id": "segment_20260922_175208_a25770f38a91",
+      "split": "train",
+      "sample": "train/task_20260922_174838_802a3c29d898/segment_20260922_175208_a25770f38a91/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_175344_b3e6437178ea",
+      "segment_id": "segment_20260922_175345_7a8d5c73d939",
+      "split": "train",
+      "sample": "train/task_20260922_175344_b3e6437178ea/segment_20260922_175345_7a8d5c73d939/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_175344_b3e6437178ea",
+      "segment_id": "segment_20260922_175451_fbba84fd10f1",
+      "split": "train",
+      "sample": "train/task_20260922_175344_b3e6437178ea/segment_20260922_175451_fbba84fd10f1/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_175344_b3e6437178ea",
+      "segment_id": "segment_20260922_175605_0b5570b1f3e6",
+      "split": "train",
+      "sample": "train/task_20260922_175344_b3e6437178ea/segment_20260922_175605_0b5570b1f3e6/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_175836_b72ee96ed1f6",
+      "segment_id": "segment_20260922_175838_e724454745d2",
+      "split": "train",
+      "sample": "train/task_20260922_175836_b72ee96ed1f6/segment_20260922_175838_e724454745d2/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_175836_b72ee96ed1f6",
+      "segment_id": "segment_20260922_175920_dee06fd11b2e",
+      "split": "train",
+      "sample": "train/task_20260922_175836_b72ee96ed1f6/segment_20260922_175920_dee06fd11b2e/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_180131_9beb01c93167",
+      "segment_id": "segment_20260922_180133_ada95c62729b",
+      "split": "train",
+      "sample": "train/task_20260922_180131_9beb01c93167/segment_20260922_180133_ada95c62729b/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_180131_9beb01c93167",
+      "segment_id": "segment_20260922_180206_841db58b8c10",
+      "split": "train",
+      "sample": "train/task_20260922_180131_9beb01c93167/segment_20260922_180206_841db58b8c10/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_180417_fca6deabcef5",
+      "segment_id": "segment_20260922_180419_d6cb6ce49029",
+      "split": "validation",
+      "sample": "validation/task_20260922_180417_fca6deabcef5/segment_20260922_180419_d6cb6ce49029/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_180417_fca6deabcef5",
+      "segment_id": "segment_20260922_180454_59c8d3cf4f08",
+      "split": "validation",
+      "sample": "validation/task_20260922_180417_fca6deabcef5/segment_20260922_180454_59c8d3cf4f08/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_180604_7d93193af71e",
+      "segment_id": "segment_20260922_180653_12d038ff5a1f",
+      "split": "train",
+      "sample": "train/task_20260922_180604_7d93193af71e/segment_20260922_180653_12d038ff5a1f/sample.npz"
+    },
+    {
+      "task_id": "task_20260922_180604_7d93193af71e",
+      "segment_id": "segment_20260922_180829_848d43af039e",
+      "split": "train",
+      "sample": "train/task_20260922_180604_7d93193af71e/segment_20260922_180829_848d43af039e/sample.npz"
+    }
+  ],
+  "seed": 42,
+  "validation_fraction": 0.2,
+  "validation_tasks": [
+    "task_20260922_171636_b8fe5a8c4218",
+    "task_20260922_172523_493a78b07a60",
+    "task_20260922_180417_fca6deabcef5"
+  ],
+  "mask_source": "manual_confirmed"
+}

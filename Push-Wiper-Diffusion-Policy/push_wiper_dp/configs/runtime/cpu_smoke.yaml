@@ -1,0 +1,12 @@
+name: cpu_smoke
+device: cpu
+num_epochs: 2
+batch_size: 1
+val_batch_size: 1
+num_workers: 0
+pin_memory: false
+train_limit: 2
+val_limit: 1
+val_every: 1
+sample_every: 1
+checkpoint_every: 1

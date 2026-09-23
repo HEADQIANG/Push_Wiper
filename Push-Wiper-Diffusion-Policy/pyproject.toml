@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==75.6.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "push-wiper-dp"
+version = "0.1.0"
+description = "Push-Wiper adaptation of the official image Diffusion Policy"
+requires-python = ">=3.10,<3.11"
+# Install the fully pinned environment with scripts/install_cpu.sh or install_cuda.sh.
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["push_wiper_dp*"]
+
+[tool.setuptools.package-data]
+push_wiper_dp = ["configs/**/*.yaml", "configs/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

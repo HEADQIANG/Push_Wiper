@@ -1,0 +1,28 @@
+{
+  "python": "3.10.12",
+  "executable": "Push-Wiper-Diffusion-Policy/.venv/bin/python",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.5.1+cpu",
+    "torchvision": "0.20.1+cpu",
+    "diffusers": "0.11.1",
+    "huggingface-hub": "0.25.2",
+    "numpy": "1.26.4",
+    "zarr": "2.18.3",
+    "numcodecs": "0.12.1"
+  },
+  "requested_device": "cpu",
+  "cuda_available": false,
+  "torch_cuda_version": null,
+  "gpu": null,
+  "upstream": {
+    "revision": "5ba07ac6661db573af695b419a7947ecb704690f",
+    "verified_files": 369
+  },
+  "checks": [
+    "official_workspace_import",
+    "resnet18_weights_none",
+    "ddim_sample_100_train_10_inference",
+    "official_cosine_lr_scheduler"
+  ]
+}

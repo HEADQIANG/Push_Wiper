@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "device": "cpu",
+  "parameters": 81599749,
+  "optimizer_updated": true,
+  "ema_updated": true,
+  "inference_shape": [
+    16,
+    3
+  ],
+  "reload_prediction_exact": true,
+  "resume_states_exact": true,
+  "global_step": 4,
+  "ema_updates": 4,
+  "state_digests": {
+    "model": "7b7e599fd58842b34d4016de0dddb23aa479ed62bf3c482e488ce6a4c22a08b9",
+    "ema_model": "d0bb16ac9b2941e9a3105d126c50a805007895c685c71033caf433d440dba938",
+    "optimizer": "f7643a5c9b7336b9e4148debb86ca2cca772ce431ad08202832ee5a687ca7248",
+    "lr_scheduler": "f2665100ab03b34e9a9c5da5db0f87ddc82ac6c1cdcff1b7f9be7a9fa5505fa2"
+  },
+  "gpu_verified": false,
+  "peak_process_rss_mb": 2337.11328125
+}

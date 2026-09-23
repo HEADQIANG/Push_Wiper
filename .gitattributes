@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.npz binary
+# Upstream integrity checks cover exact downloaded bytes, including line endings.
+Push-Wiper-Diffusion-Policy/third_party/diffusion_policy/** -text

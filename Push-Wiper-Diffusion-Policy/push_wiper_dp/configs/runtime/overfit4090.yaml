@@ -1,0 +1,12 @@
+name: overfit4090
+device: cuda:0
+num_epochs: 1000
+batch_size: 4
+val_batch_size: 8
+num_workers: 0
+pin_memory: true
+train_limit: 4
+val_limit: null
+val_every: 10
+sample_every: 50
+checkpoint_every: 50
