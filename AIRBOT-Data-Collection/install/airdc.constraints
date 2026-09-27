@@ -1,0 +1,6 @@
+# AIRBOT SDK 5.1.6; TurboJPEG's legacy API is used by AIRDC.
+numpy==1.26.4
+opencv-python==4.11.0.86
+PyTurboJPEG==1.8.3
+mcap-data-loader==0.1.3
+linuxpy==0.25.0

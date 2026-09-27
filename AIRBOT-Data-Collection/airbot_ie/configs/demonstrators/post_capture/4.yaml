@@ -1,0 +1,9 @@
+post_capture:
+  left:
+    range_mapping:
+      eef/joint_state/position:
+        0: [0, 0.072]
+  right:
+    range_mapping:
+      eef/joint_state/position:
+        0: [0, 0.072]

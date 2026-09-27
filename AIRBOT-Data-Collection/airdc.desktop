@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AIRDC
+Comment=Launch the AIRDC script
+Exec=bash -c "source ~/.bashrc && conda activate airdc && airdc-desktop -h; exec bash"
+Terminal=true
+Icon=utilities-terminal
+Categories=Utility;
+Keywords=airdc;python;data;collection;

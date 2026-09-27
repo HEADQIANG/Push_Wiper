@@ -1,0 +1,8 @@
+# @package _global_
+
+dataset:
+  directory: mcap
+  file_extension: .mcap
+
+sampler:
+  _target_: airdc.common.samplers.mcap_sampler.McapDataSampler

@@ -1,0 +1,19 @@
+update_rate: 20
+sample_limit:
+  size: 1000
+  start_round: -1
+concurrent:
+  actions: [update]
+visualizer:
+  _target_: airdc.common.visualizers.opencv.OpenCVVisualizer
+  rate: 30
+  concurrent_mode: process
+  key_filtering:
+    include_endswith:
+      - color/image_raw
+      - depth/image_rect_raw
+      - aligned_depth_to_color/image_raw
+# prepare_cv2: "${instantiate:{_target_: airdc.common.visualizers.opencv.prepare_cv2_imshow}}"
+
+fsm:
+  _target_: airbot_ie.configs.fsm.get_fsm_config

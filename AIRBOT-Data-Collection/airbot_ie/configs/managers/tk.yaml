@@ -1,0 +1,9 @@
+# @package _global_
+
+managers:
+  names:
+    - self_manager
+    - tkinter
+  instances:
+    - _target_: airdc.managers.basis.SelfManager
+    - _target_: airdc.managers.tk.TkinterManager

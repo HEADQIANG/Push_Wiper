@@ -1,0 +1,61 @@
+_target_: airbot_ie.robots.airbot_mmk.AIRBOTMMK
+
+ip: 192.168.11.200
+components: [left_arm, left_arm_eef, right_arm, right_arm_eef, head, spine] # , base
+cameras:
+  head_camera: # D435
+    camera_type: REALSENSE
+    rgb_camera.color_profile: 640,480,30
+    enable_depth: "false"
+    align_depth.enable: "false"
+    # serial_no: '123456'  # multiple rs-cameras case
+  # left_camera:
+  #   camera_type: USB
+  #   video_device: /dev/left_camera
+  #   image_width: "640"
+  #   image_height: "480"
+  #   framerate: "25"
+  # right_camera:
+  #   video_device: /dev/right_camera
+  #   camera_type: USB
+  #   image_width: "640"
+  #   image_height: "480"
+  #   framerate: "25"
+  # left_camera: # D405
+  #   camera_type: REALSENSE
+  #   rgb_camera.color_profile: 640,480,30
+  #   depth_module.color_profile: 640,480,30
+  #   enable_depth: "false"
+  #   align_depth.enable: "false"
+  #   serial_no: '427622272912'  # multiple rs-cameras case
+  # right_camera: # D405
+  #   camera_type: REALSENSE
+  #   rgb_camera.color_profile: 640,480,30
+  #   depth_module.color_profile: 640,480,30
+  #   enable_depth: "false"
+  #   align_depth.enable: "false"
+  #   serial_no: '427622272922'  # multiple rs-cameras case
+default_action: [
+    # arms will not move when demonstrating
+    -0.233,
+    -0.73,
+    1.088,
+    1.774,
+    -1.1475,
+    -0.1606, # left_arm (6 joints)
+    1.0, # left_arm_eef (1 joint)
+    0.2258,
+    -0.6518,
+    0.9543,
+    -1.777,
+    1.0615,
+    0.3588, # right_arm (6 joints)
+    1.0, # right_arm_eef (1 joint)
+    0.0,
+    -0.0, # head (2 joints)
+    0.0, # spine (1 joint)
+    # 0.0,
+    # 0.0,
+    # 0.0, # base (x, y, theta)
+  ]
+demonstrate: true

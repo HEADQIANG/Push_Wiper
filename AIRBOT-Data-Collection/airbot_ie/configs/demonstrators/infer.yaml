@@ -1,0 +1,29 @@
+# @package _global_
+
+defaults:
+  - setup@_setup
+
+# ignore the leader roles of
+# the data collection demonstrator
+# and then it can be used for inference
+_setup:
+  demonstrator:
+    components:
+      ignore_roles: [l]
+
+demonstrator:
+  _target_: airdc.common.demonstrators.wrapped.WrappedDemonstrator
+  environment:
+    _target_: airdc.common.environments.grouped.GroupedEnvironment
+    components: ${_setup.demonstrator.instance.components}
+  caller:
+    _target_: airdc.common.callers.policy.PolicyEvaluationCaller
+  wrappers:
+    - _target_: airdc.common.wrappers.ted.TemporalEnsemblingWithDropping
+      drop_num: 0
+      weights: []
+      max_steps: 0
+
+dataset:
+  root: ./data_infer
+  directory: infer

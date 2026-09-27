@@ -1,0 +1,9 @@
+# @package _global_
+
+managers:
+  names:
+    - self_manager
+    - keyboard
+  instances:
+    - _target_: airdc.managers.basis.SelfManager
+    - _target_: airdc.managers.keyboard.KeyboardCallbackManager

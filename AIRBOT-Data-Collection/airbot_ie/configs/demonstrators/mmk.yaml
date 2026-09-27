@@ -1,0 +1,19 @@
+# @package _global_
+
+defaults:
+  - /robots: airbot_mmk
+  - basis
+
+demonstrator:
+  components:
+    groups:
+      - /
+    names:
+      - mmk
+    instances:
+      - ${robots}
+    roles:
+      - o
+dataset:
+  directory: airbot_mmk
+log_jitter: false

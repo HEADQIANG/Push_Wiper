@@ -1,0 +1,239 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+  [[ptk_half]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 2647:453
+      maximised = False
+      fullscreen = False
+      size = 734, 722
+      title = airdc
+      last_active_term = 6718bf6a-9fe9-42e3-a13a-2d56aaebda10
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 352
+      ratio = 0.4909344490934449
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = 6718bf6a-9fe9-42e3-a13a-2d56aaebda10
+      command = echo "airbot_server -i can_lead -p 50050";airbot_server -i can_lead -p 50050;bash
+    [[[terminal3]]]
+      type = Terminal
+      parent = child1
+      order = 1
+      profile = default
+      uuid = bf462479-3ae1-4696-8f97-53363464b463
+      command = echo "airbot_server -i can_follow -p 50051";airbot_server -i can_follow -p 50051;bash
+  [[ptk]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 2618:439
+      maximised = False
+      fullscreen = False
+      size = 1056, 766
+      title = ghz@MECAREVO:~
+      last_active_term = 96e9786e-e4b9-46d1-a36d-d7c7ad99ba4a
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 371
+      ratio = 0.48751642575558474
+    [[[child2]]]
+      type = HPaned
+      parent = child1
+      order = 0
+      position = 517
+      ratio = 0.49191246431969554
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      uuid = 6718bf6a-9fe9-42e3-a13a-2d56aaebda10
+      command = echo "airbot_server -i can_left_lead -p 50050";airbot_server -i can_left_lead -p 50050;bash
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = 96e9786e-e4b9-46d1-a36d-d7c7ad99ba4a
+      command = echo "airbot_server -i can_right_lead -p 50052";airbot_server -i can_right_lead -p 50052;bash
+    [[[child5]]]
+      type = HPaned
+      parent = child1
+      order = 1
+      position = 517
+      ratio = 0.49191246431969554
+    [[[terminal6]]]
+      type = Terminal
+      parent = child5
+      order = 0
+      profile = default
+      uuid = bf462479-3ae1-4696-8f97-53363464b463
+      command = echo "airbot_server -i can_left -p 50051";airbot_server -i can_left -p 50051;bash
+    [[[terminal7]]]
+      type = Terminal
+      parent = child5
+      order = 1
+      profile = default
+      uuid = 11a74c8d-85d6-4339-ba8d-5a4857602a87
+      command = echo "airbot_server -i can_right -p 50053";airbot_server -i can_right -p 50053;bash
+  [[ptk_auto]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 1992:1467
+      maximised = True
+      fullscreen = False
+      size = 1848, 1016
+      title = airdc
+      last_active_term = 31b989bf-f865-4e37-9327-a75a7f64ae18
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 506
+      ratio = 0.5004945598417408
+    [[[child2]]]
+      type = HPaned
+      parent = child1
+      order = 0
+      position = 599
+      ratio = 0.3250135648399349
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      directory = ""
+      uuid = 9b27cba5-3cdf-4c4c-962e-1e8bf65a381f
+      command = echo "airbot_server -i can_left_lead -p 50050";airbot_server -i can_left_lead -p 50050;bash
+    [[[child4]]]
+      type = HPaned
+      parent = child2
+      order = 1
+      position = 620
+      ratio = 0.498793242156074
+    [[[terminal5]]]
+      type = Terminal
+      parent = child4
+      order = 0
+      profile = default
+      directory = ""
+      uuid = 31b989bf-f865-4e37-9327-a75a7f64ae18
+      command = echo "airbot_server -i can_right_lead -p 50052";airbot_server -i can_right_lead -p 50052;bash
+    [[[terminal6]]]
+      type = Terminal
+      parent = child4
+      order = 1
+      profile = default
+      directory = ""
+      uuid = 660a08e0-8823-485b-bfed-50f31b20a870
+      command = echo "python3 tests/test_task_follow.py -lp 50050 -fp 50051";python3 tests/test_task_follow.py -lp 50050 -fp 50051;bash
+    [[[child7]]]
+      type = HPaned
+      parent = child1
+      order = 1
+      position = 598
+      ratio = 0.3244709712425393
+    [[[terminal8]]]
+      type = Terminal
+      parent = child7
+      order = 0
+      profile = default
+      directory = ""
+      uuid = 65c1c881-a20b-4f82-a332-e91bd5d18e4e
+      command = echo "airbot_server -i can_left -p 50051";airbot_server -i can_left -p 50052;bash
+    [[[child9]]]
+      type = HPaned
+      parent = child7
+      order = 1
+      position = 621
+      ratio = 0.4991961414790997
+    [[[terminal10]]]
+      type = Terminal
+      parent = child9
+      order = 0
+      profile = default
+      directory = ""
+      uuid = 89c49230-5872-4ccb-b070-aee1c22ff063
+      command = echo "airbot_server -i can_right -p 50053";airbot_server -i can_right -p 50053;bash
+    [[[terminal11]]]
+      type = Terminal
+      parent = child9
+      order = 1
+      profile = default
+      directory = ""
+      uuid = c8eb197a-2e57-4361-830f-2ddbf7a25213
+      command = echo "python3 tests/test_task_follow.py -lp 50052 -fp 50053";python3 tests/test_task_follow.py -lp 50052 -fp 50053;bash
+  [[ptk_half_auto]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 1992:1467
+      maximised = True
+      fullscreen = False
+      size = 1848, 1016
+      title = ghz@MECAREVO:~
+      last_active_term = bbe5e7a0-db2f-46f5-920a-2ac5b674782d
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 922
+      ratio = 0.5002712967986978
+    [[[child2]]]
+      type = VPaned
+      parent = child1
+      order = 0
+      position = 506
+      ratio = 0.5004945598417408
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      uuid = 5a3af1c0-bad4-4bb5-9a79-d34b5cd1e1bb
+      command = echo "airbot_server -i can_lead -p 50050";airbot_server -i can_lead -p 50050;bash
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = bbe5e7a0-db2f-46f5-920a-2ac5b674782d
+      command = echo "airbot_server -i can_follow -p 50051";airbot_server -i can_follow -p 50051;bash
+    [[[terminal5]]]
+      type = Terminal
+      parent = child1
+      order = 1
+      profile = default
+      uuid = 2dcaa1cb-9d4a-4fe3-8171-e92d9545a6e8
+      command = echo "python3 tests/test_task_follow.py -lp 50050 -fp 50051";python3 tests/test_task_follow.py -lp 50050 -fp 50051;bash
+[plugins]

@@ -1,0 +1,26 @@
+# @package _global_
+
+defaults:
+  - basis
+
+demonstrator:
+  auto_control:
+    groups: []
+  components:
+    groups: ["/", "/", "/"]
+    names: [lead, follow, env_camera]
+    roles: [l, f, o]
+    instances:
+      - _target_: airbot_ie.robots.airbot_play.AIRBOTPlay
+        port: 50050
+        components: [arm, eef]
+      - _target_: airbot_ie.robots.airbot_play.AIRBOTPlay
+        port: 50051
+        components: [arm, eef]
+      - _target_: airdc.common.devices.cameras.v4l2.V4L2Camera
+        camera_index: /dev/video2
+        width: 640
+        height: 480
+        fps: 30
+        rgb_camera:
+          pixel_format: MJPEG

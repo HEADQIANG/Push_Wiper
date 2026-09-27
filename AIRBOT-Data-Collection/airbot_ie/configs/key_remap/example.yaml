@@ -1,0 +1,33 @@
+# @package _global_
+
+remap_module: mcap_data_loader.utils.key
+remap_func:
+  _target_: toolz.compose_left
+  _args_:
+    # process arm keys
+    - _target_: ${remap_module}.call_if
+      pred:
+        _target_: ${remap_module}.fragment_matching
+        frag_not: [camera]
+      func:
+        _target_: toolz.compose_left
+        _args_:
+          # joint_state -> joint_states
+          - _target_: ${remap_module}.add_prefix_suffix
+            suffix: s
+          # left/leader/arm -> arm_left_leader
+          - _target_: ${remap_module}.reorder_key
+            from_indices: [0, 1, 2]
+            to_indices: [2, 0, 1]
+            inner_sep: "_"
+            strict: false
+    # process camera keys
+    - _target_: ${remap_module}.replace
+      olds:
+        - color/camera_info
+      news:
+        - image_raw/compressed/camera_info
+      counts: 1
+    # process all keys
+    - _target_: ${remap_module}.add_prefix_suffix
+      prefix: /robot
