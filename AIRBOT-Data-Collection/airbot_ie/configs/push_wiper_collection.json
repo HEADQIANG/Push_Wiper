@@ -1,0 +1,34 @@
+{
+  "robot": {
+    "mode": "teleop",
+    "lead_url": "localhost",
+    "lead_port": 50050,
+    "follow_url": "localhost",
+    "follow_port": 50051,
+    "control_hz": 100,
+    "feedback_timeout_s": 0.5,
+    "command_timeout_s": 10
+  },
+  "camera": {
+    "serial": "",
+    "width": 640,
+    "height": 480,
+    "fps": 30,
+    "stale_s": 0.5,
+    "roi": null
+  },
+  "reset": {
+    "done_position_m": 0.002,
+    "done_angle_deg": 1,
+    "done_joint_rad": 0.01,
+    "stable_s": 0.5,
+    "timeout_s": 10,
+    "follow_joint_speed_rad_s": 0.5
+  },
+  "output": "data/push_wiper",
+  "references": "data/push_wiper_references.json",
+  "sample_hz": 20,
+  "max_segment_s": 180,
+  "stain": "ketchup",
+  "operator": ""
+}

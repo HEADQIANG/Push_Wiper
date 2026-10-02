@@ -1,0 +1,87 @@
+{
+  "robot": {
+    "url": "localhost",
+    "port": 50051
+  },
+  "sensor": {
+    "port": "/dev/ttyUSB0",
+    "driver": "kunwei",
+    "slave_id": 1,
+    "baudrate": 115200,
+    "timeout_s": 1.0,
+    "zero_settle_s": 0.1,
+    "hardware_zero": true,
+    "rezero_after_preposition": true,
+    "kunwei": {
+      "baudrate": 460800,
+      "tare_duration_s": 1.0,
+      "stale_s": 0.2
+    }
+  },
+  "trajectory": {
+    "mode": "xy_json",
+    "json": "../xy_trajectory_30s/trajectory_xy.json",
+    "move_to_capture_pose": true,
+    "staged_move_to_trajectory": true,
+    "orientation_transition_s": 1.0,
+    "safe_descent_s": 2.0,
+    "high_z_m": 0.3,
+    "duration_s": 30.0,
+    "surface_z_m": null,
+    "align_tool_z": true,
+    "tool_normal_axis": "x"
+  },
+  "drag": {
+    "enabled": true,
+    "prompt": "请拖拽机械臂到初始位置，确认工具悬空且姿态正确后按 Enter："
+  },
+  "standalone": {
+    "fixed_xy": [0.20, -0.10],
+    "orientation": null,
+    "surface_z_m": null,
+    "safe_clearance_m": 0.05,
+    "approach_speed_m_s": 0.003,
+    "approach_depth_m": 0.10,
+    "contact_confirm_s": 0.1,
+    "approach_timeout_s": 60.0,
+    "contact_threshold_n": 5.0,
+    "settle_s": 0.5,
+    "hold_duration_s": 0.0,
+    "retract_s": 1.0
+  },
+  "control": {
+    "control_hz": 100.0,
+    "max_tangential_step_m": 0.01,
+    "max_tangential_speed_m_s": 0.05
+  },
+  "force": {
+    "target_force_n": 5.0,
+    "force_sign": -1,
+    "filter_cutoff_hz": 2.0,
+    "bias_duration_s": 2.0,
+    "sensor_poll_interval_s": 0.02
+  },
+  "admittance": {
+    "mass_kg": 0.05,
+    "damping_ns_m": 10.0,
+    "stiffness_n_m": 500.0,
+    "max_press_speed_m_s": 0.003,
+    "max_retract_speed_m_s": 0.008,
+    "max_displacement_m": 0.02
+  },
+  "safety": {
+    "max_force_n": 8.0,
+    "sensor_stale_s": 0.2,
+    "pose_feedback_timeout_s": 45.0,
+    "orientation_feedback_timeout_s": 35.0,
+    "vertical_axis_tolerance_deg": 12.0,
+    "pose_position_tolerance_m": 0.015,
+    "pose_orientation_tolerance_deg": 8.0,
+    "force_hold_xy_tolerance_m": 0.02,
+    "force_hold_xy_feedback_timeout_s": 60.0
+  },
+  "logging": {
+    "path": "data/force_hybrid_push.csv",
+    "force_display_interval_s": 0.2
+  }
+}

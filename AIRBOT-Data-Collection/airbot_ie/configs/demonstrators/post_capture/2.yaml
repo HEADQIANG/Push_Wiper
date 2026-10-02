@@ -1,0 +1,8 @@
+post_capture:
+  /:
+    range_mapping:
+      eef/joint_state/position:
+        0: [0, 0.072] # G2
+      # arm/joint_state/position:
+      #   0: [-3.151, 2.080] # play
+      #   # 0: [-2.74, 2.74] # play_pro

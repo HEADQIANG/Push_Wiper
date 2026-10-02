@@ -1,0 +1,29 @@
+# @package _global_
+
+defaults:
+  - /robots: airbot_play_with_name
+  - /key_remap: example
+
+key_merge:
+  method:
+    _target_: mcap_data_loader.utils.basic.merge_data_stamped
+  pred:
+    _target_: mcap_data_loader.utils.dict.PredReplaceTo
+    targets: [arm]
+    sources:
+      - [eef]
+# ros1_init:
+#   _target_: airdc.common.utils.ros.ros1.init_ros_node_safe
+#   name: airbot_data_collection_node
+
+sampler:
+  _target_: airdc.common.samplers.mcap_sampler_ros.McapDataSamplerROS
+  video_save_to: folder
+  av_coder:
+    non_monotonic_mode: drop
+    non_monotonic_log: false
+  key_remap: ${remap_func}
+
+dataset:
+  directory: ros
+  file_extension: .mcap

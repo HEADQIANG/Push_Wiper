@@ -1,0 +1,6 @@
+_target_: airdc.common.utils.tk_keyboard.Listener
+config:
+  button_callbacks:
+    Auto Configure: "script: airbot_ie.scripts.setup"
+    Modify Configuration: "script: airbot_ie.scripts.modify_config"
+    Start Data Collection: "cmd: airdc"

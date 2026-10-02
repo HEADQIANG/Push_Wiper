@@ -1,0 +1,23 @@
+# @package _global_
+
+defaults:
+  - basis
+
+demonstrator:
+  components:
+    groups:
+      - /
+    names:
+      - camera
+    instances:
+      - _target_: airdc.common.devices.cameras.intelrealsense.IntelRealSenseCamera
+        camera_index: null
+        height: 480
+        width: 640
+        enable_depth: true
+        align_depth: true
+        fps: 30
+    roles:
+      - o
+dataset:
+  directory: realsense

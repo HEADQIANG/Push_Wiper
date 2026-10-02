@@ -1,0 +1,61 @@
+_target_: airdc.common.samplers.lerobot_sampler.LeRobotDataSampler
+config:
+  lerobot_repo_id: airdc/test-lerobot
+  lerobot_fps: 30
+  lerobot_task: "AIRDC sampler contract test (videos)"
+
+  # 启用视频编码：video 特征会在 save_episode() 阶段编码为 mp4
+  lerobot_use_videos: true
+
+  # CI/本地更稳定：避免并行编码带来的非确定性与额外资源竞争
+  lerobot_parallel_encoding: false
+
+  # test payload里没有 log_stamps；这里会自动回退为按 fps 生成长度
+  lerobot_timestamp_key: log_stamps
+
+  # 基于 tests/modules/test_sampler.py 的 payload 进行映射：
+  # - follow 侧视为 observation
+  # - lead 侧视为 action（示例：将 leader 关节作为动作）
+  lerobot_features:
+    - feature_key: observation.left_follow_arm_q
+      source_key: /left/follow/arm/joint_state/position
+      kind: numeric
+
+    - feature_key: observation.left_follow_eef_q
+      source_key: /left/follow/eef/joint_state/position
+      kind: numeric
+
+    - feature_key: action.left_lead_arm_q
+      source_key: /left/lead/arm/joint_state/position
+      kind: numeric
+
+    - feature_key: action.left_lead_eef_q
+      source_key: /left/lead/eef/joint_state/position
+      kind: numeric
+
+    - feature_key: observation.right_follow_arm_q
+      source_key: /right/follow/arm/joint_state/position
+      kind: numeric
+
+    - feature_key: observation.right_follow_eef_q
+      source_key: /right/follow/eef/joint_state/position
+      kind: numeric
+
+    - feature_key: action.right_lead_arm_q
+      source_key: /right/lead/arm/joint_state/position
+      kind: numeric
+
+    - feature_key: action.right_lead_eef_q
+      source_key: /right/lead/eef/joint_state/position
+      kind: numeric
+
+    # 这里用 video：逐帧输入 (H,W,C) uint8，最终在保存时编码成 mp4。
+    - feature_key: observation.images.rgb
+      source_key: /left_camera/color/image_raw
+      kind: video
+
+    # depth 是 (H,W) 的 2D 数组，lerobot 的 image/video 校验要求 3D；因此作为 numeric 保存
+    - feature_key: observation.depth
+      source_key: /left_camera/aligned_depth_to_color/image_raw
+      kind: numeric
+      dtype: uint16

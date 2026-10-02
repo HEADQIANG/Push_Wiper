@@ -1,0 +1,21 @@
+__pycache__/
+*.egg-info/
+data/
+build/
+.vscode/
+*.mcap
+*.bson
+*.json
+!airbot_ie/configs/push_wiper_collection.json
+!airbot_ie/configs/push_wiper_mask.json
+!airbot_ie/configs/force_hybrid_push.json
+!airbot_ie/configs/push_wiper_policy_force.json
+*.txt
+*.log
+test.py
+airbot_logs/
+# hydra outputs
+outputs/
+multirun/
+dist/
+*.mp4

@@ -1,0 +1,5 @@
+_target_: airdc.common.devices.cameras.v4l2.V4L2Camera
+camera_index: 0
+fps: null
+width: 640
+height: 480

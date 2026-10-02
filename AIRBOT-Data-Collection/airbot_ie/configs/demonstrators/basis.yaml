@@ -1,0 +1,6 @@
+# @package _global_
+
+demonstrator:
+  _target_: airdc.common.demonstrators.grouped.GroupedDemonstrator
+  auto_control:
+    groups: []

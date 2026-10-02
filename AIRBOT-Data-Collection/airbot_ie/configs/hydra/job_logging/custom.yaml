@@ -1,0 +1,22 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  colorful:
+    (): airdc.utils.ColorfulFormatter
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: colorful
+    stream: ext://sys.stdout
+
+root:
+  level: INFO
+  handlers: [console]
+
+loggers:
+  airdc:
+    level: INFO
+  transitions:
+    level: WARNING

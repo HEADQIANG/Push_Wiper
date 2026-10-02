@@ -199,3 +199,17 @@ assert actions.shape == (16, 3)
 输入 mask 为原始 480×640 的 0/1 数组，参考位姿为 7 维 XYZW 数组。推理不读取 `after_mask` 或目标动作。
 16 点覆盖完整段的归一化时间，不是 16 个固定频率控制周期。当前代码不生成机械臂控制命令，
 离线轨迹误差不能换算成清洁成功率。
+
+### AIRBOT 隔离推理服务
+
+平面力位控制由 `AIRBOT-Data-Collection` 启动常驻 JSON Lines 服务，避免在 AIRBOT 环境安装 torch。服务使用本目录的虚拟环境和 EMA checkpoint：
+
+```bash
+cd /home/wp/yuelk_project/Push_Wiper/Push-Wiper-Diffusion-Policy
+unset PYTHONPATH
+PYTHONNOUSERSITE=1 .venv/bin/python -m push_wiper_dp.policy_service \
+  --checkpoint checkpoints/best.ckpt --device cuda:0 --validate
+```
+
+真机循环的启动、mask 编码、动作安全检查和导纳力控步骤见 AIRBOT 工程的
+`docs/setup/push_wiper_policy_force.md`。服务协议输入原始 480×640 uint8 mask、7 维 O 参考位姿和 seed，输出带 `action_definition_version=2` 的 16×3 `[x_base, y_base, delta_yaw]` 动作。
